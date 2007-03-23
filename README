@@ -5,9 +5,9 @@ browser, external web browser and HTML renderers, and human eyeballs.
 Docbook is used to create a highly customizable system for all needs.
 
 Build requirements:
-  cygwin-1.5.22-1
-  cygport-0.2.7-1
-  gawk-3.1.5-2
+  cygwin-1.5.24-2
+  cygport-0.2.11-1
+  gawk-3.1.5-4
   make-3.81-1
   sed-4.1.5-2
 
@@ -20,42 +20,42 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gimp2-help-0.11-1-src.tar.bz2
+  unpack gimp2-help-0.12-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gimp2-help-0.11-1.cygport all
+  cygport ./gimp2-help-0.12-1.cygport all
 
 This will create:
-  /usr/src/gimp2-help-0.11-1-src.tar.bz2
-  /usr/src/gimp2-help-0.11-1.tar.bz2
-  /usr/src/gimp2-help-cs-0.11-1.tar.bz2
-  /usr/src/gimp2-help-de-0.11-1.tar.bz2
-  /usr/src/gimp2-help-es-0.11-1.tar.bz2
-  /usr/src/gimp2-help-fr-0.11-1.tar.bz2
-  /usr/src/gimp2-help-hr-0.11-1.tar.bz2
-  /usr/src/gimp2-help-it-0.11-1.tar.bz2
-  /usr/src/gimp2-help-ko-0.11-1.tar.bz2
-  /usr/src/gimp2-help-nl-0.11-1.tar.bz2
-  /usr/src/gimp2-help-no-0.11-1.tar.bz2
-  /usr/src/gimp2-help-ru-0.11-1.tar.bz2
-  /usr/src/gimp2-help-sv-0.11-1.tar.bz2
-  /usr/src/gimp2-help-zh_CN-0.11-1.tar.bz2
+  /usr/src/gimp2-help-0.12-1-src.tar.bz2
+  /usr/src/gimp2-help-0.12-1.tar.bz2
+  /usr/src/gimp2-help-cs-0.12-1.tar.bz2
+  /usr/src/gimp2-help-de-0.12-1.tar.bz2
+  /usr/src/gimp2-help-es-0.12-1.tar.bz2
+  /usr/src/gimp2-help-fr-0.12-1.tar.bz2
+  /usr/src/gimp2-help-hr-0.12-1.tar.bz2
+  /usr/src/gimp2-help-it-0.12-1.tar.bz2
+  /usr/src/gimp2-help-ko-0.12-1.tar.bz2
+  /usr/src/gimp2-help-nl-0.12-1.tar.bz2
+  /usr/src/gimp2-help-no-0.12-1.tar.bz2
+  /usr/src/gimp2-help-ru-0.12-1.tar.bz2
+  /usr/src/gimp2-help-sv-0.12-1.tar.bz2
+  /usr/src/gimp2-help-zh_CN-0.12-1.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (gimp2-help)
-  /usr/share/doc/Cygwin/gimp2-help-0.11.README
-  /usr/share/doc/gimp2-help-0.11/AUTHORS
-  /usr/share/doc/gimp2-help-0.11/ChangeLog
-  /usr/share/doc/gimp2-help-0.11/COPYING
-  /usr/share/doc/gimp2-help-0.11/HACKING
-  /usr/share/doc/gimp2-help-0.11/INSTALL
-  /usr/share/doc/gimp2-help-0.11/NEWS
-  /usr/share/doc/gimp2-help-0.11/README
-  /usr/share/doc/gimp2-help-0.11/TODO
+  /usr/share/doc/Cygwin/gimp2-help-0.12.README
+  /usr/share/doc/gimp2-help-0.12/AUTHORS
+  /usr/share/doc/gimp2-help-0.12/ChangeLog
+  /usr/share/doc/gimp2-help-0.12/COPYING
+  /usr/share/doc/gimp2-help-0.12/HACKING
+  /usr/share/doc/gimp2-help-0.12/INSTALL
+  /usr/share/doc/gimp2-help-0.12/NEWS
+  /usr/share/doc/gimp2-help-0.12/README
+  /usr/share/doc/gimp2-help-0.12/TODO
   /usr/share/gimp/2.0/help/en/*
   /usr/share/gimp/2.0/help/images/*
   /usr/share/gimp/2.0/help/images/callouts/*
@@ -159,6 +159,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.12-1 -----
+Version bump.
 
 ----- version 0.11-1 -----
 Version bump.
