@@ -6,10 +6,14 @@ Docbook is used to create a highly customizable system for all needs.
 
 Build requirements:
   cygwin-1.5.24-2
-  cygport-0.2.11-1
+  cygport-0.3.7-1
+  docbook-xml43-4.3-1
+  docbook-xsl-1.69.1-1
   gawk-3.1.5-4
   make-3.81-1
   sed-4.1.5-2
+  libxml2-2.6.30-1
+  libxslt-1.1.22-1
 
 Canonical homepage:
   http://www.gimp.org/
@@ -20,42 +24,39 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gimp2-help-0.12-1-src.tar.bz2
+  unpack gimp2-help-2.4.0-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gimp2-help-0.12-1.cygport all
+  cygport ./gimp2-help-2.4.0-1.cygport all
 
 This will create:
-  /usr/src/gimp2-help-0.12-1-src.tar.bz2
-  /usr/src/gimp2-help-0.12-1.tar.bz2
-  /usr/src/gimp2-help-cs-0.12-1.tar.bz2
-  /usr/src/gimp2-help-de-0.12-1.tar.bz2
-  /usr/src/gimp2-help-es-0.12-1.tar.bz2
-  /usr/src/gimp2-help-fr-0.12-1.tar.bz2
-  /usr/src/gimp2-help-hr-0.12-1.tar.bz2
-  /usr/src/gimp2-help-it-0.12-1.tar.bz2
-  /usr/src/gimp2-help-ko-0.12-1.tar.bz2
-  /usr/src/gimp2-help-nl-0.12-1.tar.bz2
-  /usr/src/gimp2-help-no-0.12-1.tar.bz2
-  /usr/src/gimp2-help-ru-0.12-1.tar.bz2
-  /usr/src/gimp2-help-sv-0.12-1.tar.bz2
-  /usr/src/gimp2-help-zh_CN-0.12-1.tar.bz2
+  /usr/src/gimp2-help-2.4.0-1-src.tar.bz2
+  /usr/src/gimp2-help-2.4.0-1.tar.bz2
+  /usr/src/gimp2-help-de-2.4.0-1.tar.bz2
+  /usr/src/gimp2-help-es-2.4.0-1.tar.bz2
+  /usr/src/gimp2-help-fr-2.4.0-1.tar.bz2
+  /usr/src/gimp2-help-it-2.4.0-1.tar.bz2
+  /usr/src/gimp2-help-ko-2.4.0-1.tar.bz2
+  /usr/src/gimp2-help-nl-2.4.0-1.tar.bz2
+  /usr/src/gimp2-help-no-2.4.0-1.tar.bz2
+  /usr/src/gimp2-help-ru-2.4.0-1.tar.bz2
+  /usr/src/gimp2-help-sv-2.4.0-1.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (gimp2-help)
-  /usr/share/doc/Cygwin/gimp2-help-0.12.README
-  /usr/share/doc/gimp2-help-0.12/AUTHORS
-  /usr/share/doc/gimp2-help-0.12/ChangeLog
-  /usr/share/doc/gimp2-help-0.12/COPYING
-  /usr/share/doc/gimp2-help-0.12/HACKING
-  /usr/share/doc/gimp2-help-0.12/INSTALL
-  /usr/share/doc/gimp2-help-0.12/NEWS
-  /usr/share/doc/gimp2-help-0.12/README
-  /usr/share/doc/gimp2-help-0.12/TODO
+  /usr/share/doc/Cygwin/gimp2-help-2.4.0.README
+  /usr/share/doc/gimp2-help-2.4.0/AUTHORS
+  /usr/share/doc/gimp2-help-2.4.0/ChangeLog
+  /usr/share/doc/gimp2-help-2.4.0/COPYING
+  /usr/share/doc/gimp2-help-2.4.0/HACKING
+  /usr/share/doc/gimp2-help-2.4.0/INSTALL
+  /usr/share/doc/gimp2-help-2.4.0/NEWS
+  /usr/share/doc/gimp2-help-2.4.0/README
+  /usr/share/doc/gimp2-help-2.4.0/TODO
   /usr/share/gimp/2.0/help/en/*
   /usr/share/gimp/2.0/help/images/*
   /usr/share/gimp/2.0/help/images/callouts/*
@@ -70,14 +71,6 @@ Files included in the binary packages:
   /usr/share/gimp/2.0/help/images/tool-options/*
   /usr/share/gimp/2.0/help/images/toolbox/*
   /usr/share/gimp/2.0/help/images/using/*
-
-(gimp2-help-cs)
-  /usr/share/gimp/2.0/help/cs/*
-  /usr/share/gimp/2.0/help/images/dialogs/cs/*
-  /usr/share/gimp/2.0/help/images/filters/cs/*
-  /usr/share/gimp/2.0/help/images/menus/cs/*
-  /usr/share/gimp/2.0/help/images/toolbox/cs/*
-  /usr/share/gimp/2.0/help/images/using/cs/*
 
 (gimp2-help-de)
   /usr/share/gimp/2.0/help/de/*
@@ -104,10 +97,6 @@ Files included in the binary packages:
   /usr/share/gimp/2.0/help/images/preferences/fr/*
   /usr/share/gimp/2.0/help/images/toolbox/fr/*
   /usr/share/gimp/2.0/help/images/using/fr/*
-
-(gimp2-help-hr)
-  /usr/share/gimp/2.0/help/hr/*
-  /usr/share/gimp/2.0/help/images/using/hr/*
 
 (gimp2-help-it)
   /usr/share/gimp/2.0/help/it/*
@@ -147,18 +136,12 @@ Files included in the binary packages:
 (gimp2-help-sv)
   /usr/share/gimp/2.0/help/sv/*
 
-(gimp2-help-zh_CN)
-  /usr/share/gimp/2.0/help/zh_CN/*
-  /usr/share/gimp/2.0/help/images/dialogs/zh_CN/*  
-  /usr/share/gimp/2.0/help/images/filters/zh_CN/*
-  /usr/share/gimp/2.0/help/images/menus/zh_CN/*
-  /usr/share/gimp/2.0/help/images/preferences/zh_CN/*
-  /usr/share/gimp/2.0/help/images/toolbox/zh_CN/*
-  /usr/share/gimp/2.0/help/images/using/zh_CN/*
-  
 ------------------
 
 Port Notes:
+
+----- version 2.4.0-1 -----
+Version bump for GIMP 2.4
 
 ----- version 0.12-1 -----
 Version bump.
