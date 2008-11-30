@@ -13,34 +13,29 @@ PKG_HINTS="en"
 # outdated
 for lang in cs hr zh_CN
 do
-	PKG_CONTENTS[0]+=" --exclude=${lang}"
+	gimp2_help_CONTENTS+=" --exclude=${lang}"
 done
-
-i=1
 
 # current
 for lang in de es fr it ko nl no pl ru sv
 do
 	PKG_NAMES+=" ${PN}-${lang}"
 	PKG_HINTS+=" ${lang}"
-	PKG_CONTENTS[0]+=" --exclude=${lang}"
-	PKG_CONTENTS[${i}]="usr/share/gimp/2.0/help/${lang}/"
+	gimp2_help_CONTENTS+=" --exclude=${lang}"
+	declare gimp2_help_${lang}_CONTENTS="usr/share/gimp/2.0/help/${lang}/"
 
 	case ${lang} in
 	pl|sv) ;;
-	*)	PKG_CONTENTS[${i}]+=" usr/share/gimp/2.0/help/images/*/${lang}/" ;;
+	*)	declare gimp2_help_${lang}_CONTENTS+=" usr/share/gimp/2.0/help/images/*/${lang}/" ;;
 	esac
 
 	case ${lang} in
 	de|fr|it|no)
-	    PKG_CONTENTS[${i}]+=" usr/share/gimp/2.0/help/images/*/*/${lang}/" ;;
+	    declare gimp2_help_${lang}_CONTENTS+=" usr/share/gimp/2.0/help/images/*/*/${lang}/" ;;
 	esac
-
-	let i++
 done
-unset i
 
-PKG_CONTENTS[0]+=" usr/"
+gimp2_help_CONTENTS+=" usr/"
 
 MAKEOPTS+=" -j1"
 
