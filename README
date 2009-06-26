@@ -5,15 +5,15 @@ browser, external web browser and HTML renderers, and human eyeballs.
 Docbook is used to create a highly customizable system for all needs.
 
 Build requirements:
-  cygwin-1.5.25-15
-  cygport-0.4.2-1
+  cygwin-1.7.0-50
+  cygport-0.9.7-1
   docbook-xml43-4.3-1
-  docbook-xsl-1.69.1-1
-  gawk-3.1.6-1
-  make-3.81-1
+  docbook-xsl-1.74.3-1
+  gawk-3.1.6-2
+  make-3.81-2
   sed-4.1.5-2
-  libxml2-2.6.32-2
-  libxslt-1.1.23-2
+  libxml2-2.7.3-10
+  libxslt-1.1.23-10
 
 Canonical homepage:
   http://www.gimp.org/
@@ -49,14 +49,13 @@ This will create:
 Files included in the binary packages:
 
 (gimp2-help)
-  /usr/share/doc/gimp2-help-2.4.2/AUTHORS
-  /usr/share/doc/gimp2-help-2.4.2/ChangeLog
-  /usr/share/doc/gimp2-help-2.4.2/COPYING
-  /usr/share/doc/gimp2-help-2.4.2/HACKING
-  /usr/share/doc/gimp2-help-2.4.2/INSTALL
-  /usr/share/doc/gimp2-help-2.4.2/NEWS
-  /usr/share/doc/gimp2-help-2.4.2/README
-  /usr/share/doc/gimp2-help-2.4.2/TODO
+  /usr/share/doc/gimp2-help/AUTHORS
+  /usr/share/doc/gimp2-help/ChangeLog
+  /usr/share/doc/gimp2-help/COPYING
+  /usr/share/doc/gimp2-help/HACKING
+  /usr/share/doc/gimp2-help/NEWS
+  /usr/share/doc/gimp2-help/README
+  /usr/share/doc/gimp2-help/TODO
   /usr/share/gimp/2.0/help/en/*
   /usr/share/gimp/2.0/help/images/*
   /usr/share/gimp/2.0/help/images/callouts/*
@@ -143,29 +142,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 2.4.2-1 -----
-Version bump.
-
------ version 2.4.1-1 -----
-Version bump.
-
------ version 2.4.0-1 -----
-Version bump for GIMP 2.4
-
------ version 0.12-1 -----
-Version bump.
-
------ version 0.11-1 -----
-Version bump.
-
------ version 0.9-1 -----
-Version bump.
-
------ version 0.8-1 -----
-Version bump.
-
------ version 0.4-1 -----
-Initial release for Cygwin.
+----- version 2.4.2-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
