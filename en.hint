@@ -1,5 +1,6 @@
 category: Graphics Doc
-sdesc: "Gimp 2.0 Help (English and common image files)"
+external-source: gimp2-help
+sdesc: "Gimp 2.0 Help (English)"
 ldesc: "GIMP-Help is a help system designed for use with the internal GIMP help
 browser, external web browser and HTML renderers, and human eyeballs.
 Docbook is used to create a highly customizable system for all needs."

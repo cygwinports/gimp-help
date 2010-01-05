@@ -1,5 +1,4 @@
 category: Graphics Doc
-requires: gimp2-help
 external-source: gimp2-help
 sdesc: "Gimp 2.0 Help (Traditional Chinese)"
 ldesc: "GIMP-Help is a help system designed for use with the internal GIMP help

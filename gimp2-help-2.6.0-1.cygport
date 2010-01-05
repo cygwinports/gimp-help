@@ -1,0 +1,27 @@
+ORIG_PN="gimp-help-2"
+GIT_TAG="GIMP_HELP_${PV//./_}"
+inherit gnome2 git
+
+DESCRIPTION="GIMP help documentation"
+HOMEPAGE="http://www.gimp.org/"
+
+RESTRICT="diff"
+
+PKG_NAMES="${PN}"
+PKG_HINTS="src"
+gimp2_help_CONTENTS="usr/share/doc/"
+
+for lang in de en es fr it ja ko nl nn pl ru sv zh_CN
+do
+	PKG_NAMES+=" ${PN}-${lang}"
+	PKG_HINTS+=" ${lang}"
+	declare gimp2_help_${lang}_CONTENTS+=" usr/share/gimp/2.0/help/${lang}/"
+done
+
+MAKEOPTS+=" -j1"
+
+src_compile() {
+	cd ${B}
+	${S}/autogen.sh --prefix=/usr --enable-build --without-gimp || error "autogen.sh failed"
+	cygmake
+}
