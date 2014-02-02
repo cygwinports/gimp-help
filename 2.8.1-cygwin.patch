@@ -1,0 +1,20 @@
+--- origsrc/gimp-help-2.8.1/configure.ac	2013-11-26 17:28:26.000000000 -0600
++++ src/gimp-help-2.8.1/configure.ac	2014-02-02 01:31:06.367996100 -0600
+@@ -15,7 +15,6 @@
+ # Apparently this macro must be called before "AM_INIT_AUTOMAKE"
+ AC_CANONICAL_BUILD
+ case $build_os in
+-  *cygwin*) IS_CYGWIN=yes;;
+          *) IS_CYGWIN=no;;
+ esac
+ # for use in Makefile.am
+--- origsrc/gimp-help-2.8.1/configure	2013-11-26 17:29:00.000000000 -0600
++++ src/gimp-help-2.8.1/configure	2014-02-02 01:31:08.740131700 -0600
+@@ -1871,7 +1871,6 @@
+ 
+ 
+ case $build_os in
+-  *cygwin*) IS_CYGWIN=yes;;
+          *) IS_CYGWIN=no;;
+ esac
+ # for use in Makefile.am

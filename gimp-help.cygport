@@ -1,9 +1,7 @@
-ORIG_PN="gimp-help-2"
-GIT_TAG="GIMP_HELP_${PV//./_}"
-inherit gnome2 git
+inherit gnome2
 
 NAME="gimp-help"
-VERSION=2.8.0
+VERSION=2.8.1
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="GIMP help documentation"
@@ -11,13 +9,15 @@ DESCRIPTION="GIMP-Help is a help system designed for use with the internal GIMP
 help browser, external web browser and HTML renderers, and human eyeballs.
 Docbook is used to create a highly customizable system for all needs."
 HOMEPAGE="http://www.gimp.org/"
+SRC_URI="ftp://ftp.gimp.org/pub/gimp/help/gimp-help-${VERSION}.tar.bz2"
+PATCH_URI="2.8.1-cygwin.patch"
 
 RESTRICT="diff"
 
 PKG_NAMES="${NAME}"
 gimp_help_CONTENTS="usr/share/doc/"
 
-for lang in ca da de el en en_GB es fi fr hr it ja ko lt nl nn pl ru sl sv zh_CN
+for lang in ca da de el en en_GB es fr it ja ko nl nn pt_BR ru sl sv zh_CN
 do
 	PKG_NAMES+=" ${PN}-${lang}"
 	declare gimp_help_${lang}_CONTENTS+=" usr/share/gimp/2.0/help/${lang}/"
@@ -27,11 +27,13 @@ MAKEOPTS+=" -j1"
 
 src_compile() {
 	cd ${S}
-	${B}/autogen.sh --prefix=/usr --enable-build --without-gimp || error "autogen.sh failed"
+	${S}/configure --prefix=/usr --enable-build --without-gimp || error "autogen.sh failed"
 	cygmake
 }
 
 src_install() {
 	cd ${S}
 	cyginstall
+	# fix permissions
+	find ${D} -type f -exec chmod 644 '{}' +
 }
