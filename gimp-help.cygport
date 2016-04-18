@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="gimp-help"
-VERSION=2.8.1
+VERSION=2.8.2
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="GIMP help documentation"
@@ -9,18 +9,27 @@ DESCRIPTION="GIMP-Help is a help system designed for use with the internal GIMP
 help browser, external web browser and HTML renderers, and human eyeballs.
 Docbook is used to create a highly customizable system for all needs."
 HOMEPAGE="http://www.gimp.org/"
-SRC_URI="ftp://ftp.gimp.org/pub/gimp/help/gimp-help-${VERSION}.tar.bz2"
+SRC_URI="http://download.gimp.org/pub/gimp/help/gimp-help-${VERSION}.tar.bz2"
 PATCH_URI="2.8.1-cygwin.patch"
+
+ARCH=noarch
 
 RESTRICT="diff"
 
 PKG_NAMES="${NAME}"
-gimp_help_CONTENTS="usr/share/doc/"
+gimp_help_OBSOLETES="${NAME}-en"
+gimp_help_CONTENTS="usr/share/doc/ usr/share/gimp/2.0/help/en/"
 
-for lang in ca da de el en en_GB es fr it ja ko nl nn pt_BR ru sl sv zh_CN
+for lang in ca:Catalan da:Danish de:German el:Greek en_GB:British es:Spanish \
+	fr:French it:Italian ja:Japanese ko:Korean nl:Dutch nn:Nynorsk \
+	pt_BR:Brazilian ru:Russian sl:Slovenian sv:Swedish zh_CN:Chinese
 do
-	PKG_NAMES+=" ${PN}-${lang}"
-	declare gimp_help_${lang}_CONTENTS+=" usr/share/gimp/2.0/help/${lang}/"
+	PKG_NAMES+=" ${NAME}-${lang%:*}"
+	declare gimp_help_${lang%:*}_SUMMARY="${lang#*:} translation of ${SUMMARY}"
+	# legal.html links to original English version, which then links to
+	# GFDL subpages and to the stylesheets in the same directory...
+	declare gimp_help_${lang%:*}_REQUIRES=${NAME}
+	declare gimp_help_${lang%:*}_CONTENTS+=" usr/share/gimp/2.0/help/${lang%:*}/"
 done
 
 MAKEOPTS+=" -j1"
